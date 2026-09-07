@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U.S. Presidents Quiz</title>
+    <link rel="stylesheet" href="USPresidentsStyles.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <h1>U.S. Presidents Quiz</h1>
+
+      <form id="guess-form" class="controls">
+        <label for="guess-input">Type a president's name</label>
+        <div class="input-row">
+          <input
+            id="guess-input"
+            type="text"
+            placeholder="Example: Abraham Lincoln"
+            autocomplete="off"
+          />
+          <button type="submit">Add</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" aria-live="polite">
+        Fill in each president in any order.
+      </p>
+
+      <div class="top-row">
+        <p id="score" class="score">0 / 47</p>
+        <p id="timer" class="timer">10:00</p>
+        <button id="give-up-btn" type="button" class="secondary">
+          Give up
+        </button>
+      </div>
+
+      <div class="two-column-wrap">
+
+        <div class="table-panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>President</th>
+              </tr>
+            </thead>
+            <tbody id="pre1900-table"></tbody>
+          </table>
+        </div>
+
+        <div class="table-panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>President</th>
+              </tr>
+            </thead>
+            <tbody id="modern-table"></tbody>
+          </table>
+        </div>
+      </div>
+        
+      <div class="status-key">
+        <span class="key-item key-assassinated">Assassinated</span>
+        <span class="key-item key-died-in-office">Died in office</span>
+        <span class="key-item key-resigned">Resigned</span>
+        <span class="key-item key-impeached">Impeached</span>
+      </div>
+      
+      <div id="end-screen" class="hidden">
+        <div class="end-card">
+          <h2 id="end-title">You got them all!</h2>
+          <p id="end-score">Perfect score: 47 / 47</p>
+          
+          <div class="end-actions">
+            <button id="play-again-btn" type="button">Play again</button>
+            <button id="exit-btn" type="button" class="exit-btn" aria-label="Close end screen">
+              &times;
+            </button>
+          </div>
+        </div>
+      </div>
+      
+
+      <button id="reset-btn" class="secondary" type="button">Reset board</button>
+    </main>
+
+    <script src="USPresidentsApp.js"></script>
+  </body>
+</html>
